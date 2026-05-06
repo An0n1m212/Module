@@ -32,7 +32,7 @@ public class Student
         }
         else
         {
-            Console.WriteLine("Помилка: Максимальна кількість дисциплін (7) досягнута.");
+            Console.WriteLine("ГЏГ®Г¬ГЁГ«ГЄГ : ГЊГ ГЄГ±ГЁГ¬Г Г«ГјГ­Г  ГЄВіГ«ГјГЄВіГ±ГІГј Г¤ГЁГ±Г¶ГЁГЇГ«ВіГ­ (7) Г¤Г®Г±ГїГЈГ­ГіГІГ .");
         }
     }
     public double AverageGrade
@@ -53,7 +53,7 @@ public class Student
     {
         get
         {
-            if (_subjectCount == 0) return "Немає даних";
+            if (_subjectCount == 0) return "ГЌГҐГ¬Г Вє Г¤Г Г­ГЁГµ";
             int maxGrade = _grades[0];
             int maxIndex = 0;
             for (int i = 1; i < _subjectCount; i++)
@@ -72,7 +72,7 @@ public class Student
     {
         get
         {
-            if (_subjectCount == 0) return "Немає даних";
+            if (_subjectCount == 0) return "ГЌГҐГ¬Г Вє Г¤Г Г­ГЁГµ";
             int minGrade = _grades[0];
             int minIndex = 0;
             for (int i = 1; i < _subjectCount; i++)
@@ -89,16 +89,16 @@ public class Student
 
     public void PrintInfo()
     {
-        Console.WriteLine($"Студент: {FullName}, №{StudentNumber}");
-        Console.WriteLine($"Залікова: {RecordBookNumber}, Тел: {PhoneNumber}");
-        Console.WriteLine("Оцінки за сесію:");
+        Console.WriteLine($"Г‘ГІГіГ¤ГҐГ­ГІ: {FullName}, В№{StudentNumber}");
+        Console.WriteLine($"Г‡Г Г«ВіГЄГ®ГўГ : {RecordBookNumber}, Г’ГҐГ«: {PhoneNumber}");
+        Console.WriteLine("ГЋГ¶ВіГ­ГЄГЁ Г§Г  Г±ГҐГ±ВіГѕ:");
         for (int i = 0; i < _subjectCount; i++)
         {
             Console.WriteLine($"  - {_subjects[i]}: {_grades[i]}");
         }
-        Console.WriteLine($"Середній бал: {AverageGrade}");
-        Console.WriteLine($"Найкращий предмет: {BestSubject}");
-        Console.WriteLine($"Найгірший предмет: {WorstSubject}");
+        Console.WriteLine($"Г‘ГҐГ°ГҐГ¤Г­ВіГ© ГЎГ Г«: {AverageGrade}");
+        Console.WriteLine($"ГЌГ Г©ГЄГ°Г Г№ГЁГ© ГЇГ°ГҐГ¤Г¬ГҐГІ: {BestSubject}");
+        Console.WriteLine($"ГЌГ Г©ГЈВіГ°ГёГЁГ© ГЇГ°ГҐГ¤Г¬ГҐГІ: {WorstSubject}");
         Console.WriteLine(new string('-', 20));
     }
 }
@@ -109,18 +109,18 @@ class Program
     {
         Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-        Student st1 = new Student("Іванов Іван Іванович", 1, "ЗК-123", "+380501112233");
-        st1.AddGrade("Програмування", 95);
-        st1.AddGrade("Математика", 80);
-        st1.AddGrade("Фізика", 75);
-        st1.AddGrade("Бази даних", 90);
+        Student st1 = new Student("РљРѕРјРµРЅ Р’С–С‚Р°Р»С–Р№ РђРЅРґСЂС–Р№РѕРІРёС‡", 1, "РћРџ-123", "+380501112233");
+        st1.AddGrade("РђРЎР”", 95);
+        st1.AddGrade("РњРўРЎ", 80);
+        st1.AddGrade("РЎРњРћРћРџ", 75);
+        st1.AddGrade("Р’РёС‰Р° РјР°С‚РµРјР°С‚РёРєР°", 90);
 
         st1.PrintInfo();
 
-        Student st2 = new Student("Петров Петро Петрович", 2, "ЗК-124", "+380504445566");
-        st2.AddGrade("Програмування", 60);
-        st2.AddGrade("Математика", 70);
-        st2.AddGrade("Фізика", 55);
+        Student st2 = new Student("Р›РµРјР°РЅ Р›СЋРґРјРёР»Р° Р’С–С‚Р°Р»С–Р№РѕРІРЅР°", 2, "РЎР•-124", "+380504445566");
+        st2.AddGrade("РђРЎР”", 60);
+        st2.AddGrade("РњРўРЎ", 70);
+        st2.AddGrade("РЎРњРћРћРџ", 55);
 
         st2.PrintInfo();
     }
